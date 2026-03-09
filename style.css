@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap');
+
+/* Corpo pagina */
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  margin: 0;
+  min-height: 100vh;
+
+  /* Gradient animato */
+  background: linear-gradient(135deg, #667eea, #764ba2, #f6b73c);
+  background-size: 400% 400%;
+  animation: gradientAnimation 15s ease infinite;
+
+  /* Rimuoviamo flex per evitare problemi con H1 */
+}
+
+/* Animazione gradiente */
+@keyframes gradientAnimation {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
+h2, h4, p {
+  text-align: center;
+}
+
+/* Titolo centrato */
+.portfolio-title {
+  text-align: center;        /* Centra il testo */
+  font-size: 3rem;
+  margin: 40px 0 20px 0;
+  color: white;
+}
+
+/* Griglia dei progetti */
+.portfolio {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  padding: 20px 40px 60px 40px;
+  max-width: 1200px;
+  margin: 0 auto; /* centra la griglia */
+}
+
+/* Card progetto */
+.project {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-decoration: none;
+  color: #333;
+}
+
+.project:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.35);
+}
+
+.project img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.project-content {
+  padding: 15px;
+}
+
+.project-content h2 {
+  margin: 0 0 5px 0;
+}
+
+.project-content h4 {
+  margin: 0 0 10px 0;
+  font-weight: 400;
+}
+
+.project-content p {
+  font-size: 14px;
+  color: #555;
+}
+
+.portfolio-title {
+  text-align: center;        /* Centra il titolo */
+  font-size: 3rem;           /* Dimensione grande */
+  margin: 40px 0 20px 0;     /* Spaziatura sopra e sotto */
+  color: white;              /* Contrasto sul gradient */
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+/* Footer minimal */
+footer {
+  text-align: center;
+  font-size: 0.9rem;
+  color: white;
+  margin: 40px 0 20px 0;
+}
